@@ -1,0 +1,7 @@
+[project]
+name = "f1-data-engineering"
+version = "0.1.0"
+description = "Personal project to train data engineering skills"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
