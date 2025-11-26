@@ -28,7 +28,7 @@ for name in ("fastf1", "fastf1.fastf1", "fastf1.api", "fastf1.req", "fastf1.core
 @dataclass
 class Loader:
     """
-    Loads F1 session results using fastf1 and saves them as parquet files.
+    Loads F1 session results using fastf1 and saves them as csv files.
 
     Attributes
     ----------
@@ -39,7 +39,7 @@ class Loader:
     identifiers : list[str]
         Session identifiers (e.g. ["race", "sprint"]).
     output_dir : Path
-        Directory where parquet files will be written.
+        Directory where csv files will be written.
     sleep_between_years : float
         Pause (in seconds) between processing consecutive years.
     """
@@ -127,15 +127,15 @@ class Loader:
 
     def save_data(self, year: int, gp: int, identifier: str, df: pd.DataFrame) -> Path:
         """
-        Save the DataFrame as a parquet file in the configured output directory.
+        Save the DataFrame as a csv file in the configured output directory.
 
         Returns
         -------
         Path
             Full path of the saved file.
         """
-        file_name = self.output_dir / f"{year}_{gp:02d}_{identifier}.parquet"
-        df.to_parquet(file_name)
+        file_name = self.output_dir / f"{year}_{gp:02d}_{identifier}.csv"
+        df.to_csv(file_name, sep=";", index=False)
         logger.info("File saved: %s (rows=%d)", file_name, len(df))
         return file_name
 
@@ -242,7 +242,7 @@ def parse_args() -> argparse.Namespace:
         "--output-dir",
         type=Path,
         default=Path("data/raw"),
-        help="Directory where parquet files will be saved.",
+        help="Directory where csv files will be saved.",
     )
     parser.add_argument(
         "--sleep",

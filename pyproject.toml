@@ -5,7 +5,10 @@ description = "Personal project to train data engineering skills"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "delta>=0.4.2",
+    "delta-spark>=4.0.0",
     "fastf1>=3.6.1",
+    "ipykernel>=7.1.0",
     "pandas>=2.3.3",
     "pyarrow>=22.0.0",
     "pyspark>=4.0.1",

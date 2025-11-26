@@ -11,3 +11,5 @@ wheels/
 
 data/raw/*.parquet
 data/raw/*.csv
+data/bronze
+data/silver
