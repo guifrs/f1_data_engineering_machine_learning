@@ -49,7 +49,7 @@ class Loader:
     stop: int
     identifiers: List[str]
     output_dir: Path = Path("data/raw")
-    sleep_between_years: float = 10.0
+    sleep_between_years: float = 25.0
 
     def __post_init__(self) -> None:
         self.output_dir.mkdir(parents=True, exist_ok=True)

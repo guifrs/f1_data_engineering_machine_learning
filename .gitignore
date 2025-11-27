@@ -14,3 +14,4 @@ data/raw/*.csv
 data/bronze/results/*
 data/silver/champions/*
 data/silver/feature_store_drivers/*
+data/silver/abt_champions/*

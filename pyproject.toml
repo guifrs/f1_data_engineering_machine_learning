@@ -5,13 +5,17 @@ description = "Personal project to train data engineering skills"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "bar-chart-race>=0.1.0",
     "delta>=0.4.2",
     "delta-spark>=4.0.0",
     "fastf1>=3.6.1",
+    "feature-engine>=1.9.3",
     "ipykernel>=7.1.0",
     "pandas>=2.3.3",
     "pyarrow>=22.0.0",
     "pyspark>=4.0.1",
     "rich>=14.2.0",
     "ruff>=0.14.6",
+    "scikit-learn>=1.7.2",
+    "seaborn>=0.13.2",
 ]

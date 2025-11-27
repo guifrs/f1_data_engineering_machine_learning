@@ -4,6 +4,7 @@ from delta import DeltaTable, configure_spark_with_delta_pip
 from rich.progress import track
 from pathlib import Path
 
+
 def read_query(path: str) -> str:
     """
     Read a SQL query from a given file path.
